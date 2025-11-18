@@ -1,0 +1,155 @@
+/* -------- FONTES -------- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Roboto:wght@300;400;500&display=swap');
+
+
+
+/* Títulos → Montserrat
+   Texto normal → Roboto */
+
+/* -------- VARIÁVEIS DE CORES -------- */
+:root {
+    --principal: #385a9d; 
+    --secundaria: #e7ecf6;
+    --destaque: #ffb703;
+}
+
+
+
+/* -------- CONFIGURAÇÃO GLOBAL -------- */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+    color: #333;
+}
+
+
+
+/* -------- NAV -------- */
+nav {
+    background: var(--principal);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+/* -------- SEÇÕES -------- */
+section, header {
+    padding: 80px 20px 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+header img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+
+
+/* Containers de itens */
+.item {
+    background: var(--secundaria);
+    padding: 15px;
+    margin: 20px 0;
+    border-left: 4px solid var(--destaque);
+}
+
+
+
+/* Habilidades */
+.skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    background: var(--secundaria);
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+}
+
+
+
+/* -------- RODAPÉ -------- */
+footer {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 0;
+}
+
+footer a {
+    color: var(--destaque);
+    text-decoration: none;
+}
+
+
+
+/* -------- RESPONSIVIDADE -------- */
+
+/* Mobile → menu vertical */
+@media (max-width: 700px) {
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header, section {
+        padding: 120px 20px 40px;
+    }
+}
+
+
+
+/* Desktop → layouts alinhados verticalmente */
+@media (min-width: 701px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #educacao .item,
+    #experiencia .item {
+        display: flex;
+        flex-direction: column;
+    }
+}
